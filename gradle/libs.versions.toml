@@ -1,0 +1,249 @@
+[versions]
+# Defined centralized versions for all dependencies
+spring-boot = "3.3.3"
+spring-framework = "6.1.2"
+spring-dependency-management = "1.1.7"
+
+lombok = "1.18.34"
+spring-security-core = "6.3.3"
+spring-cloud = "4.1.3"
+spring-cloud-bom = "2023.0.5"
+feign-okhttp = "13.3"
+togglz = "4.4.0"
+
+jasypt-spring-boot = "3.0.5"
+springdoc-openapi = "2.6.0"
+guava = "33.3.1-jre"
+junit-jupiter = "5.11.4"
+junit-platform-launcher = "1.12.0"
+mockito = "5.14.0"
+resilience4j = "3.1.2"
+ehcache = "3.10.8"
+progressbar = "0.10.1"
+commons-text = "1.12.0"
+
+# Flyway versions
+flyway = "11.2.0"
+
+# Hibernate versions
+hibernate-envers = "6.5.2.Final"
+hypersistence-utils = "3.8.2"
+
+# JPOS versions
+drools = "7.74.1.Final" #TODO change to latest (10.0.0) after kogitio migration (jpos 3.0)
+jpos = "2.1.9"
+jposee = "2.2.9"
+
+# Miscellaneous utilities versions
+jsch = "0.2.19"
+typetools = "0.6.3"
+json = "20240303"
+modelmapper = "3.2.1"
+android-util = "1.0.5"
+jedis = "5.0.2"
+gson = "2.11.0"
+dom4j = "2.1.4"
+spotbugs-annotations = "4.9.2"
+jetbrains-annotations = "26.0.2"
+jjwt = "0.12.6"
+
+# Apache library versions
+commons-lang3 = "3.17.0"
+httpclient5 = "5.3.1"
+poi = "5.4.0"
+commons-validator = "1.9.0"
+commons-codec = "1.18.0"
+
+# Nimbus
+nimbus-jose-jwt = "9.40"
+
+# Checkstyle
+checkstyle = "10.18.1"
+
+# Jakarta
+jakarta-ws-rs = "2.1.6"
+jakarta-jms = "2.0.3"
+jakarta-xml-bind = "4.0.2"
+
+# Database versions
+postgresql = "42.7.3"
+
+# Security
+java-jwt = "4.4.0"
+jwks-rsa = "0.22.1"
+
+# Jackson
+jackson = "2.18.3"
+
+# Simple XML
+simple-xml = "2.7.1"
+
+# cbi
+nv-i18n = "1.29"
+opencsv = "5.9"
+snappy-java = "1.1.10.7"
+
+# Axon
+axon-spring-boot-starter = "4.10.3"
+
+# Mapstruct
+mapstruct = "1.6.3"
+
+[plugins]
+# Plugins used in the build.gradle
+java = { id = "java" }
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+checkstyle = { id = "checkstyle" }
+
+[libraries]
+# Lombok
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+# Spring
+spring-aspects = { module = "org.springframework:spring-aspects", version.ref = "spring-framework" }
+
+# Spring Dependencies
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" }
+spring-boot-starter-cache = { module = "org.springframework.boot:spring-boot-starter-cache" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+spring-boot-starter-data-redis = { module = "org.springframework.boot:spring-boot-starter-data-redis" }
+spring-boot-starter-thymeleaf = { module = "org.springframework.boot:spring-boot-starter-thymeleaf" }
+spring-context = { module = "org.springframework:spring-context" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-starter-web-services = { module = "org.springframework.boot:spring-boot-starter-web-services" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+spring-boot-actuator = { module = "org.springframework.boot:spring-boot-actuator" }
+spring-boot-test = { module = "org.springframework.boot:spring-boot-test" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-configuration-processor = { module = "org.springframework.boot:spring-boot-configuration-processor" }
+jasypt-spring-boot-starter = { module = "com.github.ulisesbocchio:jasypt-spring-boot-starter", version.ref = "jasypt-spring-boot" }
+spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools", version.ref = "spring-boot" }
+spring-boot-starter-data-mongodb = { module = "org.springframework.boot:spring-boot-starter-data-mongodb", version.ref = "spring-boot" }
+spring-boot-starter-aop = { module = "org.springframework.boot:spring-boot-starter-aop", version.ref = "spring-boot" }
+
+# Spring Data
+spring-data-commons = { module = "org.springframework.data:spring-data-commons", version.ref = "spring-boot" }
+
+# Spring Security
+spring-boot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "spring-boot" }
+spring-security-core = { module = "org.springframework.security:spring-security-core", version.ref = "spring-security-core" }
+spring-security-test = { module = "org.springframework.security:spring-security-test" }
+spring-security-config = { module = "org.springframework.security:spring-security-config"}
+
+#Security
+java-jwt = { module = "com.auth0:java-jwt", version.ref = "java-jwt" }
+jwks-rsa = { module = "com.auth0:jwks-rsa", version.ref = "jwks-rsa" }
+
+# Spring Kafka
+spring-kafka = { module = "org.springframework.kafka:spring-kafka" }
+
+# Spring Cloud
+spring-cloud-starter-config = { module = "org.springframework.cloud:spring-cloud-starter-config", version.ref = "spring-cloud" }
+spring-cloud-starter-openfeign = { module = "org.springframework.cloud:spring-cloud-starter-openfeign", version.ref = "spring-cloud" }
+feign-okhttp = { module = "io.github.openfeign:feign-okhttp", version.ref = "feign-okhttp" }
+spring-cloud-circuitbreaker-resilience4j = { module = "org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j", version.ref = "resilience4j" }
+spring-cloud-config-server = { module = "org.springframework.cloud:spring-cloud-config-server", version.ref = "spring-cloud" }
+spring-cloud-dependencies = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "spring-cloud-bom" }
+
+# Swagger
+springdoc-openapi-starter-webmvc-ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc-openapi" }
+
+# Drools/Kie Dependencies
+kie-api = { module = "org.kie:kie-api", version.ref = "drools" }
+drools-core = { module = "org.drools:drools-core", version.ref = "drools" }
+kie-ci = { module = "org.kie:kie-ci", version.ref = "drools" }
+kie-server-api = { module = "org.kie.server:kie-server-api", version.ref = "drools" }
+kie-server-client = { module = "org.kie.server:kie-server-client", version.ref = "drools" }
+drools-decisiontables = { module = "org.drools:drools-decisiontables", version.ref = "drools" }
+drools-compiler = { module = "org.drools:drools-compiler", version.ref = "drools" }
+
+# JPOS
+jpos = { module = "org.jpos:jpos", version.ref = "jpos" }
+jposee-cryptoservice = { module = "org.jpos.ee:jposee-cryptoservice", version.ref = "jposee" }
+jposee-txn = { module = "org.jpos.ee:jposee-txn", version.ref = "jposee" }
+jposee-minigl = { module = "org.jpos.ee:jposee-minigl", version.ref = "jposee" }
+
+# Testing Libraries
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform-launcher" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+
+# Nimbus
+nimbus-jose-jwt = { module = "com.nimbusds:nimbus-jose-jwt", version.ref = "nimbus-jose-jwt" }
+
+# Flyway
+flyway-core = { module = "org.flywaydb:flyway-core", version.ref = "flyway" }
+flyway-database-postgresql = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway" }
+
+# Apache Libraries
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commons-lang3" }
+commons-text = { module = "org.apache.commons:commons-text", version.ref = "commons-text" }
+httpclient5 = { module = "org.apache.httpcomponents.client5:httpclient5", version.ref = "httpclient5" }
+poi = { module = "org.apache.poi:poi", version.ref = "poi" }
+poi-ooxml = { module = "org.apache.poi:poi-ooxml", version.ref = "poi" }
+commons-validator = { module = "commons-validator:commons-validator", version.ref = "commons-validator" }
+commons-codec = { module = "commons-codec:commons-codec", version.ref = "commons-codec" }
+
+
+# Hibernate
+hibernate-envers = { module = "org.hibernate.orm:hibernate-envers", version.ref = "hibernate-envers" }
+hypersistence-utils = { module = "io.hypersistence:hypersistence-utils-hibernate-63", version.ref = "hypersistence-utils" }
+
+# Other Utilities
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+jsch = { module = "com.github.mwiede:jsch", version.ref = "jsch" }
+android-util = { module = "com.yy:android-util", version.ref = "android-util" }
+typetools = { module = "net.jodah:typetools", version.ref = "typetools" }
+json = { module = "org.json:json", version.ref = "json" }
+modelmapper = { module = "org.modelmapper:modelmapper", version.ref = "modelmapper" }
+jedis = { module = "redis.clients:jedis", version.ref = "jedis" }
+ehcache = { module = "org.ehcache:ehcache", version.ref = "ehcache" }
+progressbar = { module = "me.tongfei:progressbar", version.ref = "progressbar" }
+
+#Jackson
+jakarta-xml-bind-api = { module = "jakarta.xml.bind:jakarta.xml.bind-api", version.ref = "jakarta-xml-bind" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-dataformat-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+jackson-module-jaxb-annotations = { module = "com.fasterxml.jackson.module:jackson-module-jaxb-annotations", version.ref = "jackson" }
+jackson-datatype-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+
+# Jakarta
+jakarta-ws-rs = { module = "jakarta.ws.rs:jakarta.ws.rs-api", version.ref = "jakarta-ws-rs" }
+jakarta-jms-api = { module = "jakarta.jms:jakarta.jms-api", version.ref = "jakarta-jms" }
+
+# cbi
+nv-i18n = { module = "com.neovisionaries:nv-i18n", version.ref = "nv-i18n" }
+opencsv = { module = "com.opencsv:opencsv", version.ref = "opencsv" }
+snappy-java = { module = "org.xerial.snappy:snappy-java", version.ref = "snappy-java" }
+
+# Togglz
+togglz-spring-boot-starter = { module = "org.togglz:togglz-spring-boot-starter", version.ref = "togglz" }
+togglz-console = { module = "org.togglz:togglz-console", version.ref = "togglz" }
+
+# Axon
+axon-spring-boot-starter = { module = "org.axonframework:axon-spring-boot-starter", version.ref = "axon-spring-boot-starter" }
+
+simple-xml = { module = "org.simpleframework:simple-xml", version.ref = "simple-xml" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+dom4j = { module = "org.dom4j:dom4j", version.ref = "dom4j" }
+
+# Mapstruct
+mapstruct = { module = "org.mapstruct:mapstruct", version.ref = "mapstruct" }
+mapstruct-processor = { module = "org.mapstruct:mapstruct-processor", version.ref = "mapstruct" }
+
+spotbugs-annotations = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotbugs-annotations" }
+jjwt-api = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
+
+# PostgreSQL
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+
+# Checkstyle
+checkstyle = { module = "com.puppycrawl.tools:checkstyle", version.ref = "checkstyle" }
+
+[bundles]
+deprecated-kie-dependencies = ["jakarta-ws-rs", "jakarta-jms-api", "jackson-module-jaxb-annotations"]

@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'version-catalog'
+}
+
+group = 'com.areeba'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+catalog {
+    versionCatalog {
+        from(files("gradle/libs.versions.toml"))
+    }
+}
+
+// Publication configuration for Maven artifact publishing
+publishing {
+    publications {
+        versionCatalog(MavenPublication) {
+            from components.versionCatalog
+        }
+    }
+
+    repositories {
+        // Maven Local for quick testing locally
+        mavenLocal()
+    }
+}
